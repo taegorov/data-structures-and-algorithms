@@ -18,7 +18,7 @@ const addOne = (arr) => {
     // push into an array
     newArray.push(incremented);
   })
-  
+
   return newArray;
 };
 
@@ -34,12 +34,12 @@ const addExclamation = (arr) => {
   const newArray = [];
 
   arr.forEach((value) => {
-  const exclaimWord = value + '!';
-  newArray.push(exclaimWord);
+    const exclaimWord = value + '!';
+    newArray.push(exclaimWord);
   })
   return newArray;
 }
-  
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -50,8 +50,15 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
-};
+  const newArray = [];
+
+  arr.forEach((value) => {
+    const upperCaseWord =  value.toUpperCase();
+    newArray.push(upperCaseWord);
+  });
+
+  return newArray;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
