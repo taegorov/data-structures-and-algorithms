@@ -31,8 +31,15 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
-};
+  const newArray = [];
+
+  arr.forEach((value) => {
+  const exclaimWord = value + '!';
+  newArray.push(exclaimWord);
+  })
+  return newArray;
+}
+  
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -57,11 +64,20 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+
+  return word.toUpperCase() + '!'
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+
+  const newArray = [];
+
+  words.forEach((word) => {
+    const emphaticWord = callback(word);
+    newArray.push(emphaticWord);
+  })
+
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,11 +97,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+
+  for (let i = 0; i < times; i += 1) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,8 +128,22 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  console.log(availableItems);
+
+  const newArray = [];
+  availableItems.forEach((fruit) => {
+    if (fruit.available === true) {
+      newArray.push(fruit.name);
+    }
+  });
+  return newArray;
 };
+
+
+// words.forEach((word) => {
+//   const emphaticWord = callback(word);
+//   newArray.push(emphaticWord);
+// })
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
