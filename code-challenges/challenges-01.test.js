@@ -53,7 +53,7 @@ const allUpperCase = (arr) => {
   const newArray = [];
 
   arr.forEach((value) => {
-    const upperCaseWord =  value.toUpperCase();
+    const upperCaseWord = value.toUpperCase();
     newArray.push(upperCaseWord);
   });
 
@@ -168,6 +168,27 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  const newArray = [];
+  arr.forEach((num) => {
+
+    // this will write fizzbuzz:
+    if (num % 15 === 0) {
+      newArray.push('Fizz Buzz');
+
+      // this will write buzz:
+    } else if (num % 5 === 0) {
+      newArray.push('Buzz');
+
+      // this will write fizz:
+    } else if (num % 3 === 0) {
+      newArray.push('Fizz');
+
+      // this will add number to array:
+    } else {
+      newArray.push(num);
+    }
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -221,7 +242,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
