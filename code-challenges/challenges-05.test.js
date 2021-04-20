@@ -343,7 +343,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-describe('Testing challenge 7', () => {
+xdescribe('Testing challenge 7', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
