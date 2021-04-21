@@ -187,15 +187,24 @@ const characters = [
 
 
 const countNumberOfChildren = (arr) => {
-  arr.reduce((acc, cur) => {
-    if (cur.children !== 'undefined') {
-      cur === '0' ? acc: acc += 1
-    } else {
+  return arr.reduce((acc, cur) => {
+    if (cur.children) {
+      acc += cur.children.length;
+      return acc;
     }
     return acc;
-  }
-  )
+  }, 0);
 }
+
+
+//   if (cur.children !== 'undefined') {
+//     cur === '0' ? acc: acc += 1
+//   } else {
+//   }
+//   return acc;
+// }
+// )
+
 
 
 
@@ -343,7 +352,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
