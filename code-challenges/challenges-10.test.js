@@ -109,6 +109,18 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
+  let dataObjs = [];
+  for (let i = 0; i < hours.length; i++) {
+    dataObjs.push({
+      sales: `${data[i]} cookies`,
+      time: hours[i]
+    })
+  }
+  return dataObjs;
+};
+
+
+
 //   const hourlySales = [];
 
   
@@ -127,7 +139,7 @@ const salesData = (hours, data) => {
 //   acc.push(cur.name)
 //   return acc;
 // }, []);
-}
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -151,9 +163,11 @@ const errands = [
   }
 ];
 
-const howManyTreats = (arr) => {
-  // Solution code here...
-};
+const howManyTreats = (arr) => (
+  arr.reduce((acc, cur) => cur.store === 'Pet store' ? acc = cur : acc, {}).items.reduce((acc, cur) => cur.name === 'Treats' ? acc = cur : acc, {}).quantity
+)
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
