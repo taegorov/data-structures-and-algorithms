@@ -121,9 +121,22 @@ hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenValues = (arr, character) => (
-  Object.values(arr.reduce((acc, cur) => cur.name === character ? acc = cur : acc, {}))[2] instanceof Array
-);
+// const hasChildrenValues = (arr, character) => (
+//   Object.values(arr.reduce((acc, cur) => cur.name === character ? acc = cur : acc, {}))[2] instanceof Array
+// );
+
+const hasChildrenValues = (arr, character) => {
+  let isTrue = false;
+  for (let i = 0; i < arr.length; i+=1) {
+    if (arr[i].name === character) {
+      const characterArray = Object.values(arr[i]);
+      if(characterArray.length > 3) {
+        isTrue = true;
+      }
+    }
+  }
+  return isTrue;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
