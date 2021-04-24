@@ -109,8 +109,26 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
-};
+//   const hourlySales = [];
+
+  
+//   for(let i = 0; i < hoursOpen.length; i++) {
+//     let total = 0;
+//     for(let j = 0; j < data.length; j++) {
+//       total += hours[j][i];
+//     }
+//     hourlySum.push(total);
+//   }
+//   return hourlySum;
+// };
+
+
+// const returnNames = (arr) => arr.reduce((acc, cur) => {
+//   acc.push(cur.name)
+//   return acc;
+// }, []);
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
