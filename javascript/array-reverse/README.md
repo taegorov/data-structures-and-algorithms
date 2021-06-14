@@ -7,7 +7,7 @@
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
-![mywhiteboard](/javascript/array-reverse/codechallenge1.JPG)
+![mywhiteboard](/javascript/array-reverse/array-reverse.JPG)
 
 
 ## Approach & Efficiency
