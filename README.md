@@ -16,4 +16,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 [Link to 401 JavaScript array-reverse](javascript/array-reverse/README.md)
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+[Link to 401 JavaScript array-shift](javascript/array-shift/README.md)
