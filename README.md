@@ -17,3 +17,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 [Link to 401 JavaScript array-reverse](javascript/array-reverse/README.md)
 
 [Link to 401 JavaScript array-shift](javascript/array-shift/README.md)
+
+[Link to 401 JavaScript array-binary-search](javascript/array-binary-search/README.md)
