@@ -12,10 +12,12 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-[Link to 401 JavaScript top-level README here](javascript/README.md)
+[Link to top-level README](javascript/README.md)
 
-[Link to 401 JavaScript array-reverse](javascript/array-reverse/README.md)
+[Link to array-reverse](javascript/array-reverse/README.md)
 
-[Link to 401 JavaScript array-shift](javascript/array-shift/README.md)
+[Link to array-shift](javascript/array-shift/README.md)
 
-[Link to 401 JavaScript array-binary-search](javascript/array-binary-search/README.md)
+[Link to array-binary-search](javascript/array-binary-search/README.md)
+
+[Link to linked-list](javascript/linked-list/README.md)
