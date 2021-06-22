@@ -36,6 +36,8 @@ My approach was  following along with lecture. To write tests, I essentially jus
 
 `.insert` inserts a node
 `.toEqual`  compares value to expected value
+`.insertBefore` inserts a node *before* a specified part of a list
+`.insertAfter` inserts a node *after* a specified part of a list
 
 
 ## Reference
