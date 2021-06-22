@@ -22,7 +22,7 @@ class LinkedList {
     }
   }
 
-  add(value) {
+  append(value) {
     let current = this.head;
 
     while (current) {
@@ -81,14 +81,52 @@ class LinkedList {
     console.log(string);
     return string;
   }
+
+
+  insertBefore(value, newVal) {
+    let current = this.head;
+    let newNode = new Node(newVal);
+
+    while (current.next !== null) {
+      if (current.value === value) {
+        newNode.next = current;
+        this.head = newNode;
+      } else if (current.next.value === value) {
+        let placeholder = current.next;
+        current.next = newNode;
+        newNode.next = placeholder;
+        return;
+      }
+      current = current.next;
+    }
+  }
+
+  insertAfter(value, newVal) {
+    let current = this.head;
+
+    while (current) {
+      if (current.value === value) {
+        let newNode = new Node(newVal);
+        let placeholder = current.next;
+        current.next = newNode;
+        newNode.next = placeholder;
+      }
+      current = current.next
+    }
+  }
+
+
+
 }
+
+
 
 
 const linkedList = new LinkedList();
 
 linkedList.head = new Node(0);
-linkedList.add(1);
-linkedList.add(2);
+linkedList.append(1);
+linkedList.append(2);
 linkedList.toString();
 
 
