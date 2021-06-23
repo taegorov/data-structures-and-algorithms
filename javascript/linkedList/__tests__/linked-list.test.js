@@ -129,4 +129,73 @@ describe('tests linked lists', () => {
     expect(afterLast.head.next.next.next.value).toEqual(5);
   });
 
+
+  test('Where k is greater than the length of the linked list', () => {
+    const kTest = new linkedListTest.linkedList();
+    kTest.head = new linkedListTest.node('Ras');
+    kTest.head.next = new linkedListTest.node('Dva');
+    kTest.head.next.next = new linkedListTest.node('Tree');
+    kTest.head.next.next.next = new linkedListTest.node('Cheteeree');
+    kTest.insert('Pyat');
+
+    const kTrueTest = kTest.kthFromEnd(0);
+
+    expect(kTrueTest).toEqual(null);
+  });
+
+
+  test('Where k and the length of the list are the same', () => {
+    const kTest = new linkedListTest.linkedList();
+    kTest.head = new linkedListTest.node(1);
+    kTest.head.next = new linkedListTest.node(2);
+    kTest.head.next.next = new linkedListTest.node(3);
+    kTest.head.next.next.next = new linkedListTest.node(4);
+    kTest.insert(5);
+
+    const kTrueTest = kTest.kthFromEnd(4);
+
+    expect(kTrueTest).toEqual(1);
+  });
+
+
+  test('Where k is not a positive integer', () => {
+    const kTest = new linkedListTest.linkedList();
+    kTest.head = new linkedListTest.node(1);
+    kTest.head.next = new linkedListTest.node(2);
+    kTest.head.next.next = new linkedListTest.node(3);
+    kTest.head.next.next.next = new linkedListTest.node(4);
+    kTest.insert(5);
+
+    const kTrueTest = kTest.kthFromEnd(0);
+    console.log(kTest.kthFromEnd(0));
+
+    expect(kTrueTest).toEqual(null);
+  });
+
+
+  test('Where the linked list is of a size 1', () => {
+    const kTest = new linkedListTest.linkedList();
+    kTest.head = new linkedListTest.node(0);
+
+    const kTrueTest = kTest.kthFromEnd(1);
+
+
+    expect(kTrueTest).toEqual(0);
+  });
+
+
+  test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const kTest = new linkedListTest.linkedList();
+    kTest.head = new linkedListTest.node(1);
+    kTest.head.next = new linkedListTest.node(2);
+    kTest.head.next.next = new linkedListTest.node(3);
+    kTest.head.next.next.next = new linkedListTest.node(4);
+    kTest.insert(5);
+
+    const kTrueTest = kTest.kthFromEnd(4);
+    console.log('order of values for happy path test:', kTest.head.value, kTest.head.next.value, kTest.head.next.next.value, kTest.head.next.next.next.value);
+
+    expect(kTrueTest).toEqual(1);
+  });
+
 });
