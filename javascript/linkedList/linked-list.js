@@ -115,6 +115,26 @@ class LinkedList {
     }
   }
 
+  kthFromEnd(k) {
+    let current = this.head;
+    if (current === null || k < 1) {
+      return null;
+    }
+    let instanceOne = this.head;
+    let instanceTwo = this.head;
+
+    for (let i = 0; i < k - 1; i += 1) {
+      if (instanceTwo === null) {
+        return null;
+      }
+      instanceTwo = instanceTwo.next;
+    }
+    while (instanceTwo.next !== null) {
+      instanceOne = instanceOne.next;
+      instanceTwo = instanceTwo.next;
+    }
+    return instanceOne.value;
+  }
 
 
 }

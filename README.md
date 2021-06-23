@@ -20,4 +20,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 [Link to array-binary-search](javascript/array-binary-search/README.md)
 
-[Link to linked-list](javascript/linked-list/README.md)
+[Link to linked-list](javascript/linkedList/README.md)
