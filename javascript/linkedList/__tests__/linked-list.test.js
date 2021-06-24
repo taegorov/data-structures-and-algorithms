@@ -4,6 +4,7 @@ const linkedList = require('../linked-list.js');
 const linkedListTest = require('../linked-list.js');
 
 
+
 describe('tests linked lists', () => {
   test('Can successfully instantiate an empty linked list', () => {
     const empty = new linkedListTest.linkedList();
@@ -196,6 +197,24 @@ describe('tests linked lists', () => {
     console.log('order of values for happy path test:', kTest.head.value, kTest.head.next.value, kTest.head.next.next.value, kTest.head.next.next.next.value);
 
     expect(kTrueTest).toEqual(1);
+  });
+
+
+  test('Tests if separate lists \'zip\' together', () => {
+    const listOne = new linkedListTest.linkedList();
+    listOne.head = new linkedListTest.node(1);
+    listOne.append(8);
+    listOne.append(4);
+
+    const listTwo = new linkedListTest.linkedList();
+    listTwo.head = new linkedListTest.node(22);
+    listTwo.append(59);
+    listTwo.append(923);
+
+    const zipTest = linkedListTest.zipList(listOne, listTwo);
+    console.log('zipTest:', zipTest);
+
+    expect(zipTest).toEqual('{1} -> {22} -> {8} -> {59} -> {4} -> {923} -> {null}');
   });
 
 });
