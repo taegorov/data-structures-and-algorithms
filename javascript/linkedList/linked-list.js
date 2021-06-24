@@ -135,9 +135,39 @@ class LinkedList {
     }
     return instanceOne.value;
   }
-
-
 }
+
+function zipLists(list1, list2) {
+  const newList = new LinkedList();
+  list1 = list1.head;
+  list2 = list2.head;
+  newList.head = new Node(list1.value);
+  list1 = list1.next;
+
+  while (list1 || list2) {
+    if (list1 && list2) {
+      newList.append(list2.value);
+      newList.append(list1.value);
+      list2 = list2.next;
+      list1 = list1.next;
+
+    } else if (list1 === null && list2) {
+      newList.append(list2.value);
+      list2 = list2.next;
+
+    } else if (list1 && list2 === null) {
+      newList.append(list1.value);
+      list1 = list1.next;
+    } else {
+      return;
+    }
+  }
+  return newList.toString();
+}
+
+
+
+
 
 
 
@@ -153,4 +183,5 @@ linkedList.toString();
 module.exports = {
   'linkedList': LinkedList,
   'node': Node,
+  'zipList': zipLists,
 };
