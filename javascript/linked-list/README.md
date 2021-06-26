@@ -1,4 +1,4 @@
-# Singly Linked List
+# Linked List
 <!-- Short summary or background information -->
 
 Introduction to Linked List. Adding nodes with values, changing current node, testing functionality.
