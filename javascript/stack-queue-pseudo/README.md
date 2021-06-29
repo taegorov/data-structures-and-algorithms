@@ -18,16 +18,41 @@ My approach was to build off what I learned in the stacks-and-queues lecture and
 #### Big O:
 `includes()` is O(N) - `insert()` is O(1) - `toString()` is O(N)
 
-## API
+#### Visual:
+
+![whiteboard](CC11.jpg)
+
+## Algorithm
 <!-- Description of each method publicly available to your Linked List -->
 
-`.insert` inserts a node
-`.toEqual`  compares value to expected value
-`.insertBefore` inserts a node *before* a specified part of a list
-`.insertAfter` inserts a node *after* a specified part of a list
+1. create a new constructor
+2. define new variables as front and rear of new Stack
+3. for enqueue, push a value to the rear of the stack
+4. for dequeue, if the front is empty and while the rear is **not** empty, push the popped rear onto the front 
 
+
+## PseudoCode
+
+```js
+class Pseudo {
+    front = new Stack
+    rear = new Stack
+  }
+  enqueue(value) {
+    rear.push(value)
+  }
+  dequeue() {
+    if (front is empty) {
+      while (rear is NOT empty) {
+        front.push(rear.pop)
+      }
+    }
+    return
+  }
+}
+```
 
 ## Reference
 
-I used Jacob Knaack's (of Code Fellows) demo code as a guide to writing my code
+I used Jacob Knaack's (of Code Fellows) demo code as a guide to writing my code.
 
