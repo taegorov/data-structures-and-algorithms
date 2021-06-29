@@ -23,3 +23,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 [linked-list](javascript/linked-list/README.md)
 
 [stacks-and-queues](javascript/stacks-and-queues/README.md)
+
+[stack-queue-pseudo](javascript/stack-queue-pseudo/README.md)
