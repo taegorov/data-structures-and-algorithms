@@ -25,3 +25,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 [stacks-and-queues](javascript/stacks-and-queues/README.md)
 
 [stack-queue-pseudo](javascript/stack-queue-pseudo/README.md)
+
+[animal-shelter](javascript/animal-shelter/README.md)
+
+[stack-queue-brackets](javascript/stack-queue-brackets/README.md)
