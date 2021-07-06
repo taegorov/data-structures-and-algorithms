@@ -7,6 +7,8 @@ Binary Tree and BST Implementation
 
 Binary Tree and Binary Search Tree implementation and testing.
 
+7/5/21: Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
@@ -22,6 +24,9 @@ My approach was to follow along with Jacob Knaack during lecture. Any parts I wa
 
 ## Reference
 
-I was assisted by Code Fellows instructor Jacob Knaack's code and lecture. I also used the following website to assist me further (along with StackOverflow, of course):
+I was assisted by Code Fellows instructor Jacob Knaack's code and lecture. 
 
+I also used the following website to assist me further (along with StackOverflow, of course):
 https://towardsdatascience.com/4-types-of-tree-traversal-algorithms-d56328450846 
+
+7/5/21: Jacob Knaack's demo code walked me through this process again, and we all worked on it together as a class.

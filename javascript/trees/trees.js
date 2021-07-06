@@ -10,8 +10,10 @@ class Node {
   }
 }
 
+////////////////////////////////////////////////////
+// === === Binary Tree Search constructor === === //
+///////////////////////////////////////////////////
 
-// === === BTS constructor === === //
 class BinaryTreeSearch {
   constructor() {
     this.root = null;
@@ -79,7 +81,10 @@ class BinaryTreeSearch {
 }
 
 
-// === === BT constructor === === //
+/////////////////////////////////////////////
+// === === Binary Tree constructor === === //
+/////////////////////////////////////////////
+
 class BinaryTree {
   constructor() {
     this.root = null;
@@ -217,6 +222,36 @@ class BinaryTree {
       }
     }
   }
+
+
+  // === === Find maximum value - Code Challenge 16 === === //
+  findMaxValue() {
+
+    let current = this.root;
+
+    const findMax = (node) => {
+      if (node === null) {
+        return;
+      }
+
+      let actualMax = node.value;
+      let leftSideMax = findMax(node.left);
+      let rightSideMax = findMax(node.right);
+
+      if (leftSideMax > actualMax) {
+        actualMax = leftSideMax;
+      }
+
+      if (rightSideMax > actualMax) {
+        actualMax = rightSideMax;
+      }
+
+      return actualMax;
+    };
+
+    return findMax(current);
+  }
+
 }
 
 
