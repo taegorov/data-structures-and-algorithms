@@ -88,12 +88,33 @@ describe('Tests binary tree and binary tree search', () => {
     bTree.root.left.left = new binaryTree.node(3);
 
     bTree.root.right = new binaryTree.node(5);
-    bTree.root.right = new binaryTree.node(2342);
+    bTree.root.right.right = new binaryTree.node(2342);
 
     const max = bTree.findMaxValue();
 
     expect(max).toEqual(2342);
   });
 
+
+  test('Traverses breadth-first', () => {
+
+    bTree.root = new binaryTree.node(15);
+
+    bTree.root.left = new binaryTree.node(5);
+    bTree.root.left.left = new binaryTree.node(4);
+    bTree.root.left.right = new binaryTree.node(8);
+    bTree.root.left.right.left = new binaryTree.node(3);
+    bTree.root.left.right.right = new binaryTree.node(14);
+
+    bTree.root.right = new binaryTree.node(20);
+    bTree.root.right.left = new binaryTree.node(28);
+    bTree.root.right.right = new binaryTree.node(30);
+    bTree.root.right.right.left = new binaryTree.node(12);
+    bTree.root.right.right.right = new binaryTree.node(133);
+
+    const breadthTest = bTree.breadthFirst();
+
+    expect(breadthTest).toEqual([15, 5, 20, 4, 8, 28, 30, 3, 14, 12, 133]);
+  });
 
 });

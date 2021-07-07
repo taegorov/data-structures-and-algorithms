@@ -252,8 +252,45 @@ class BinaryTree {
     return findMax(current);
   }
 
-}
+  // === === Breadth-first traversal - Code Challenge 17 === === //
+  breadthFirst() {
 
+    let iteration = [];
+
+    let traversal = (current, num) => {
+      if (!current) {
+        return null;
+      }
+
+      if (!iteration[num]) {
+        iteration[num] = [current.value];
+      } else {
+        iteration[num].push(current.value);
+      }
+
+      traversal(current.left, num + 1);
+      traversal(current.right, num + 1);
+    };
+
+    traversal(this.root, 0);
+
+    let flattenArray = (array, result = []) => {
+
+      for (let i = 0; i < array.length; i++) {
+        let value = array[i];
+        if (Array.isArray(value)) {
+          flattenArray(value, result);
+        } else {
+          result[result.length] = value;
+        }
+      }
+
+      return result;
+    };
+
+    return flattenArray(iteration);
+  }
+}
 
 
 // === === Exports === === //
