@@ -7,6 +7,7 @@ class Node {
     this.left = null;
     this.right = null;
     this.value = value;
+    this.children = new Array(value);
   }
 }
 
@@ -293,9 +294,65 @@ class BinaryTree {
 }
 
 
+////////////////////////////////////////////////////
+// === === K-Ary Tree Search constructor === === //
+///////////////////////////////////////////////////
+class Kary {
+  constructor(index) {
+    this.index = index;
+    this.root = null;
+  }
+}
+
+function fizzBuzzTree(kAryTree) {
+
+  let tree = new Kary(kAryTree.index);
+  tree.root = new Node(kAryTree.root.value, kAryTree.index);
+
+  let current = kAryTree.root;
+  let final = tree.root;
+
+  let newArray = [];
+  let newArray2 = [];
+
+  newArray.unshift(current);
+  newArray2.unshift(final);
+
+  while (newArray.length) {
+    current = newArray.pop();
+    final = newArray2.pop();
+    if (current.value % 15 === 0) {
+      final.value = 'FizzBuzz';
+    }
+    else if (current.value % 5 === 0) {
+      final.value = 'Buzz';
+    }
+    else if (current.value % 3 === 0) {
+      final.value = 'Fizz';
+    }
+    else {
+      final.value = current.value.toString();
+    }
+
+    for (let i = 0; i < current.children.length; i += 1) {
+      if (current.children[i]) {
+        final.children[i] = new Node(i, kAryTree.index);
+        newArray.unshift(current.children[i]);
+        newArray2.unshift(final.children[i]);
+      }
+    }
+
+  }
+
+  return tree;
+}
+
+
 // === === Exports === === //
 module.exports = {
   'bt': BinaryTree,
   'bts': BinaryTreeSearch,
   'node': Node,
+  'tree': Kary,
+  'fizzBuzzTree': fizzBuzzTree,
 };
