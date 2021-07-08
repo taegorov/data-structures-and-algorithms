@@ -1,10 +1,11 @@
 'use strict';
 
 
+const fizzBuzzTree = require('../trees.js');
 const binaryTree = require('../trees.js');
 
 
-describe('Tests binary tree and binary tree search', () => {
+describe('Tests binary tree, binary tree search,', () => {
 
   const bTree = new binaryTree.bt();
 
@@ -115,6 +116,49 @@ describe('Tests binary tree and binary tree search', () => {
     const breadthTest = bTree.breadthFirst();
 
     expect(breadthTest).toEqual([15, 5, 20, 4, 8, 28, 30, 3, 14, 12, 133]);
+  });
+
+});
+
+// === === K-Ary Tests start here === === //
+describe('K-Ary tree tests,', () => {
+
+  const tree = new fizzBuzzTree.tree(2);
+
+  tree.root = new fizzBuzzTree.node(15, tree.k);
+
+  tree.root.children[0] = new fizzBuzzTree.node(2, tree.k);
+  tree.root.children[1] = new fizzBuzzTree.node(4, tree.k);
+  tree.root.children[2] = new fizzBuzzTree.node(6, tree.k);
+
+  tree.root.children[0].children[0] = new fizzBuzzTree.node(8, tree.k);
+  tree.root.children[0].children[1] = new fizzBuzzTree.node(10, tree.k);
+  tree.root.children[1].children[0] = new fizzBuzzTree.node(12, tree.k);
+
+  const fbTree = fizzBuzzTree.fizzBuzzTree(tree);
+
+  // === === k-ary tests start here === === //
+  test('If the value is divisible by 3, replace the value with “Fizz”', () => {
+
+    expect(fbTree.root.children[2].value).toEqual('Fizz');
+  });
+
+
+  test('If the value is divisible by 5, replace the value with “Buzz”', () => {
+
+    expect(fbTree.root.children[0].children[1].value).toEqual('Buzz');
+  });
+
+
+  test('If the value is divisible by 3 and 5, replace the value with “FizzBuzz”', () => {
+    // console.log(fbTree.root.value);
+    expect(fbTree.root.value).toEqual('FizzBuzz');
+  });
+
+
+  test('If the value is not divisible by 3 or 5, simply turn the number into a String.', () => {
+    // console.log(fbTree.root.children[1].value);
+    expect(fbTree.root.children[1].value).toEqual('4');
   });
 
 });
