@@ -31,3 +31,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 [stack-queue-brackets](javascript/stack-queue-brackets/README.md)
 
 [trees](javascript/trees/README.md)
+
+[insertion sort](javascript/insertion-sort/README.md)
