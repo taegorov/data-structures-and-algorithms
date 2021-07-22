@@ -35,3 +35,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 [insertion sort](javascript/insertion-sort/README.md)
 
 [merge sort](javascript/merge-sort/README.md)
+
+[quick sort](javascript/quick-sort/README.md)
