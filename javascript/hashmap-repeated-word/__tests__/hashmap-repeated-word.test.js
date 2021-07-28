@@ -13,19 +13,19 @@ describe('Tests hashmap repeated words', () => {
   const test3 = 'It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...';
 
 
-  test('Finds the first word to occur more than once in a string', () => {
+  test.skip('Finds the first word to occur more than once in a string', () => {
     let test = repeat(test1);
 
     expect(test).toEqual('a');
   });
 
-  test('Finds the first word to occur more than once in a string', () => {
+  test.skip('Finds the first word to occur more than once in a string', () => {
     let test = repeat(test2);
 
     expect(test).toEqual('it');
   });
 
-  test('Finds the first word to occur more than once in a string', () => {
+  test.skip('Finds the first word to occur more than once in a string', () => {
     let test = repeat(test3);
 
     expect(test).toEqual('summer');
