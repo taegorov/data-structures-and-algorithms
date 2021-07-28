@@ -41,3 +41,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 [hash table](javascript/hash-table/README.md)
 
 [hashmap repeated word](javascript/hashmap-repeated-word/README.md)
+
+[hashmap tree intersection](javascript/hashmap-tree-intersection/README.md)

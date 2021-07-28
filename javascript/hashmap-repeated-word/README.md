@@ -21,3 +21,5 @@ https://stackoverflow.com/questions/51894952/regular-expression-to-find-repeated
 https://regex101.com/
 
 https://stackoverflow.com/questions/36127167/single-js-regex-for-matching-repeating-substrings 
+
+Classmate Cullen Sharp for helping with Regex implementation.
