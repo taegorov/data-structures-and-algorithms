@@ -20,7 +20,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 [array-binary-search](javascript/array-binary-search/README.md)
 
-[linked-list](javascript/linked-list/README.md)
+[linked-list](javascript/linkedList/README.md)
 
 [stacks-and-queues](javascript/stacks-and-queues/README.md)
 
