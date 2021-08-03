@@ -39,6 +39,10 @@ X's added for my own benefit:
 
 ![image2](graphUML2.jpg)
 
+Example Graph:
+
+![example](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-36/graph.PNG)
+
 
 
 ## Resources
@@ -48,3 +52,4 @@ X's added for my own benefit:
 
 https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html
 
+https://www.rdocumentation.org/packages/PottsUtils/versions/0.3-3/topics/getNeighbors 
