@@ -50,7 +50,7 @@ class Graph {
     while (queue.length) {
       // take from the top of the queue while the queue had Nodes.
       const current = queue.shift();
-      console.log(current.value);
+      // console.log(current.value);
       // get the neighbors from the adjacency list
       const neighbors = this.getNeighbors(current);
 
@@ -74,7 +74,7 @@ class Graph {
 
   getNeighbors(vertex) {
     if (!this.adjacencyList.has(vertex)) {
-      console.log(vertex);
+      // console.log(vertex);
       throw Error('Invalid Vertex', vertex);
     }
 

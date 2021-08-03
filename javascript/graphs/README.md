@@ -39,6 +39,10 @@ X's added for my own benefit:
 
 ![image2](graphUML2.jpg)
 
+Example Graph:
+
+![example](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-36/graph.PNG)
+
 
 
 ## Resources
