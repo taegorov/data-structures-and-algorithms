@@ -130,14 +130,15 @@ describe('Tests breadth-first functionality', () => {
   const narnia = graph.addVertex('narnia');
   const naboo = graph.addVertex('naboo');
 
-  graph.addDirectedEdge(pandora, arendelle);
-  graph.addDirectedEdge(arendelle, metroville);
-  graph.addDirectedEdge(arendelle, monstropolis);
-  graph.addDirectedEdge(metroville, monstropolis);
-  graph.addDirectedEdge(metroville, naboo);
-  graph.addDirectedEdge(metroville, narnia);
-  graph.addDirectedEdge(monstropolis, naboo);
-  graph.addDirectedEdge(narnia, naboo);
+  graph.addDirectedEdge(pandora, arendelle, 150);
+  graph.addDirectedEdge(pandora, metroville, 82);
+  graph.addDirectedEdge(arendelle, metroville, 99);
+  graph.addDirectedEdge(arendelle, monstropolis, 42);
+  graph.addDirectedEdge(metroville, monstropolis, 105);
+  graph.addDirectedEdge(metroville, naboo, 26);
+  graph.addDirectedEdge(metroville, narnia, 37);
+  graph.addDirectedEdge(monstropolis, naboo, 73);
+  graph.addDirectedEdge(narnia, naboo, 250);
 
 
   test('Should traverse breadth-first', () => {
@@ -157,5 +158,19 @@ describe('Tests breadth-first functionality', () => {
     expect(check.size).toEqual(6);
   });
 
+
+  test('Determines whether the trip is possible with direct flights, and how much it would cost', () => {
+
+    console.log('💎', graph.businessTrip(graph, [arendelle, monstropolis, naboo]));
+
+    expect(graph.businessTrip(graph, [pandora, metroville])).toEqual('true, $82');
+    expect(graph.businessTrip(graph, [arendelle, monstropolis, naboo])).toEqual('true, $115');
+  });
+
+
+
+  // to do tests:
+  // naboo, pandora to === false, $0
+  // narnia, arendelle, naboo to === false, $0
 
 });

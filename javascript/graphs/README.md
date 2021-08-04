@@ -39,11 +39,13 @@ X's added for my own benefit:
 
 ![image2](graphUML2.jpg)
 
-Example Graph:
+Example Graph for Challenge 36:
 
 ![example](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-36/graph.PNG)
 
+Example Graph for Challenge 36:
 
+![example2](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-37/GraphDay27.PNG)
 
 ## Resources
 <!-- Description of each method publicly available in your Graph -->
