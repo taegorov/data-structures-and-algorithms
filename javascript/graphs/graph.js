@@ -16,7 +16,7 @@ class Edge {
 
 class Graph {
   constructor() {
-    this.adjacencyList = new Map();  // I want a key that isn't a string, so I'm using a Map
+    this.adjacencyList = new Map(); // I want a key that isn't a string, so I'm using a Map
   }
 
   addVertex(value) {
@@ -33,6 +33,7 @@ class Graph {
 
     let edgesArray = this.adjacencyList.get(startVertex);
     edgesArray.push(new Edge(endVertex, weight));
+    // console.log('⚖', weight);
   }
 
   getNodes() {
@@ -80,31 +81,31 @@ class Graph {
 
     return [...this.adjacencyList.get(vertex)];
   }
+
+
+  businessTrip(graph, array) {
+    // console.log('🏴‍☠️', array);
+    let total = 0;
+
+    for (let i = 0; i < array.length - 1; i += 1) {
+      let neighbors = graph.getNeighbors(array[i]);
+
+      // console.log('🤿graph:', graph, '🧨array:', array);
+
+      for (let j = 0; j < neighbors.length; j += 1) {
+        let nextValue = array[i + 1].value;
+        if (neighbors[j].vertex.value === nextValue) {
+          total += neighbors[j].weight;
+        }
+      }
+      // return `false, $${total}`;
+    }
+    return `true, $${total}`;
+  }
+
 }
 
-// const graph = new Graph();
 
-// const a = graph.addVertex('A');
-// const b = graph.addVertex('B');
-// const c = graph.addVertex('C');
-// const d = graph.addVertex('D');
-// const e = graph.addVertex('E');
-// const f = graph.addVertex('F');
-// const g = graph.addVertex('G');
-// const h = graph.addVertex('H');
-
-
-// graph.addDirectedEdge(a, c);
-// graph.addDirectedEdge(a, b);
-// graph.addDirectedEdge(c, b);
-// graph.addDirectedEdge(b, f);
-// graph.addDirectedEdge(f, e);
-// graph.addDirectedEdge(f, h);
-// graph.addDirectedEdge(e, h);
-// graph.addDirectedEdge(c, g);
-
-// console.log(graph.adjacencyList);
-// console.log(graph.breadthFirst(a));
 
 module.exports = {
   Vertex,
