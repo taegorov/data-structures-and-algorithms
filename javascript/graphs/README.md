@@ -43,9 +43,13 @@ Example Graph for Challenge 36:
 
 ![example](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-36/graph.PNG)
 
-Example Graph for Challenge 36:
+Example Graph for Challenge 37:
 
 ![example2](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-37/GraphDay27.PNG)
+
+Example Graph for Challenge 38:
+
+![example3](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-38/Day28Example.PNG)
 
 ## Resources
 <!-- Description of each method publicly available in your Graph -->

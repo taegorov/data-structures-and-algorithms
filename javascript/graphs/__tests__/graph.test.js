@@ -143,7 +143,7 @@ describe('Tests breadth-first functionality', () => {
 
   test('Should traverse breadth-first', () => {
     let check = graph.breadthFirst(pandora);
-    console.log('🎀', graph.breadthFirst(pandora));
+    // console.log('🎀', graph.breadthFirst(pandora));
 
 
     expect(check.has(pandora)).toBeTruthy();
@@ -161,7 +161,7 @@ describe('Tests breadth-first functionality', () => {
 
   test('Determines whether the trip is possible with direct flights, and how much it would cost', () => {
 
-    console.log('💎', graph.businessTrip(graph, [arendelle, monstropolis, naboo]));
+    // console.log('💎', graph.businessTrip(graph, [arendelle, monstropolis, naboo]));
 
     expect(graph.businessTrip(graph, [pandora, metroville])).toEqual('true, $82');
     expect(graph.businessTrip(graph, [arendelle, monstropolis, naboo])).toEqual('true, $115');
@@ -172,5 +172,45 @@ describe('Tests breadth-first functionality', () => {
   // to do tests:
   // naboo, pandora to === false, $0
   // narnia, arendelle, naboo to === false, $0
+
+});
+
+
+// === === DEPTH FIRST TESTS === === //
+describe('Tests depth-first functionality', () => {
+
+  const A = graph.addVertex('A');
+  const B = graph.addVertex('B');
+  const C = graph.addVertex('C');
+  const D = graph.addVertex('D');
+  const E = graph.addVertex('E');
+  const F = graph.addVertex('F');
+  const G = graph.addVertex('G');
+  const H = graph.addVertex('H');
+
+  graph.addDirectedEdge(A, B);
+  graph.addDirectedEdge(A, D);
+  graph.addDirectedEdge(C, G);
+  graph.addDirectedEdge(B, C);
+  graph.addDirectedEdge(B, D);
+  graph.addDirectedEdge(D, E);
+  graph.addDirectedEdge(D, H);
+  graph.addDirectedEdge(D, F);
+  graph.addDirectedEdge(H, F);
+
+
+  const test = graph.depthFirst(graph, A);
+  const array = Array.from(test);
+
+  console.log('🛹', array);
+
+  expect(array[0].value).toEqual('A');
+  expect(array[1].value).toEqual('B');
+  expect(array[2].value).toEqual('C');
+  expect(array[3].value).toEqual('G');
+  expect(array[4].value).toEqual('D');
+  expect(array[5].value).toEqual('E');
+  expect(array[6].value).toEqual('H');
+  expect(array[7].value).toEqual('F');
 
 });
