@@ -103,6 +103,27 @@ class Graph {
     return `true, $${total}`;
   }
 
+
+  depthFirst(graph, vertex) {
+    const alreadyTraversed = new Set();
+    alreadyTraversed.add(vertex);
+
+    const traversal = (current, visited) => {
+      visited.add(current);
+      const neighbors = graph.getNeighbors(current);
+
+      for (let neighbor of neighbors) {
+        if (!visited.has(neighbor.vertex)) {
+          traversal(neighbor.vertex, visited);
+        }
+      }
+    };
+    traversal(vertex, alreadyTraversed);
+
+    return alreadyTraversed;
+  }
+
+
 }
 
 
